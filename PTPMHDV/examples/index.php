@@ -14,30 +14,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        .container div{
+        .container div {
             width:300px;
             margin: 0 auto;
         }
+        .a{
+            display:block;
+            width: 300px;
+            align: center;}
     </style>
 </head>
 <body>
 <div class="container">
         <h2 align="center">Đăng nhập</h2>
-        <form name="login" action="./benhnhan.php" method="post" class="form-group">
+        <form name="login" action="./xulydangnhap.php" method="post" class="form-group">
             <div class="form-group">
                 <label>Tài khoản:</label>
-                <input type="text" name="account" class="form-control" placeholder="Tên đăng nhập">
+                <input type="text" name="usernames" class="form-control" placeholder="Tên đăng nhập">
             </div>
             <div class="form-group">
                 <label>Mật khẩu:</label>
-                <input type="password" name="pass" class="form-control" placeholder="Mật khẩu">
+                <input type="password" name="passwords" class="form-control" placeholder="Mật khẩu">
             </div>
-            <div class="form-group">
-                <input type="checkbox">Ghi nhớ
-            </div>
-            <div class="login-submit">
-                <button type="submit" class="btn btn-primary">Đăng nhập</button>
-                <button type="submit" class="btn btn-primary">Quên mật khẩu?</button>
+            <br>
+            <div class="login-submit ">
+                <button type="submit" class="btn btn-primary a">Đăng nhập</button>
             </div>
         </form>
 </div>
