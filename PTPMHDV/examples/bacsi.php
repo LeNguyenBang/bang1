@@ -3,6 +3,7 @@ require "connect.php";
 
 $sql = "SELECT * FROM bacsi";
 $result = $conn->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +143,7 @@ $result = $conn->query($sql);
                                                 <td><?php echo $row['tuoi']?></td>
                                                 <td><?php echo $row['sdt']?></td>
                                                 <td><?php echo $row['gioitinh']?></td>
-                                                <td><?php echo $row['diachi']?></td>
+                                                <td><?php echo $row['tinh']?></td>
                                                 <td><?php echo $row['email']?></td>
                                                 <td><?php echo $row['khoa']?></td>
                                                 <td><a href="suabacsi.php?id=<?php echo $row['id']; ?>" class="au-btn--submit" style="margin-right: 10px">Sửa</a>

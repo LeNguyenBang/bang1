@@ -102,9 +102,11 @@
                                             <?php
                                             $sql = "SELECT * FROM devvn_tinhthanhpho";
                                             $result = $conn->query($sql);
+
                                             if ($result->num_rows > 0) {
                                             while ($row = $result -> fetch_assoc()){ ?>
                                             <option value="<?php echo $row['matp']?>"><?php echo $row['name']?></option>
+
                                             <?php
                                             }
                                             }?>
@@ -122,6 +124,8 @@
                                         </select>                                        </div>
 
                                     </div>
+
+
                                     <div class="form-group col-md-6 row">
                                         <label for="email">Email:</label>
                                         <input type="text" name="email" class="form-control" id="email">
