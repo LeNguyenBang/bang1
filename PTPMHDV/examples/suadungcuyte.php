@@ -1,8 +1,8 @@
 <?php
 require "connect.php";
 
-$id = (int) $_GET['ID'];
-$sql = "SELECT * FROM dungcuyte WHERE id=".$id;
+$ID = (int) $_GET['ID'];
+$sql = "SELECT * FROM dungcuyte WHERE ID=".$ID;
 $result = $conn ->query($sql);
 $row = $result -> fetch_assoc();
 
@@ -77,23 +77,23 @@ $row = $result -> fetch_assoc();
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-body">
-                                <form action="xulysuadungcuyte.php" name="bacsi" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $row['ID'] ?>" />
+                                <form action="xulysuadungcuyte.php" name="dungcuyte" method="post">
+                                    <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>" />
                                     <div class="row">
                                         <div class="col-md-6 pr-1">
                                             <div class="form-group">
                                                 <label>1. Mã dụng cụ y tế</label>
                                                 <span class="desc"></span>
-                                                <input class="form-control" name="hoten" type="text" value="<?php echo $row['MaDungCu'] ?>">
+                                                <input class="form-control" name="MaDungCu" type="text" value="<?php echo $row['MaDungCu'] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>3. Khoa</label>
                                                 <span class="desc"></span>
-                                                <input class="form-control" name="sdt" type="text" value="<?php echo $row['Khoa'] ?>">
+                                                <input class="form-control" name="Khoa" type="text" value="<?php echo $row['Khoa'] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>5. Số lượng hiện có</label>
-                                                <input class="form-control" name="diachi" type="text" value="<?php echo $row['SLHienCo'] ?>">
+                                                <input class="form-control" name="SLHienCo" type="text" value="<?php echo $row['SLHienCo'] ?>">
                                             </div>
                                             <!-- /.form-group -->
                                         </div>
@@ -101,11 +101,11 @@ $row = $result -> fetch_assoc();
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>2. Tên dụng cụ y tế</label>
-                                                <input type="text" name="tuoi" class="form-control" value="<?php echo $row['TenDungCu'] ?>">
+                                                <input type="text" name="TenDungCu" class="form-control" value="<?php echo $row['TenDungCu'] ?>">
                                             </div>
                                             <div class="form-group">
                                                 <label>4. Số lượng nhập</label>
-                                                <input class="form-control" name="gioitinh" type="text" value="<?php echo $row['SLNhap'] ?>">
+                                                <input class="form-control" name="SLNhap" type="text" value="<?php echo $row['SLNhap'] ?>">
                                             </div>
                                         </div>
                                     </div>
