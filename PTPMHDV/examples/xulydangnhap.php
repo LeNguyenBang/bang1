@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "connect.php";
 
 /**
@@ -28,8 +29,10 @@ if (isset($_POST) && !empty($_POST)) {
             /*while ($row = $result->fetch_assoc()) {
                 return $row;
                 echo $row;*/
+            $_SESSION['usernames'] = $usernames;
             header("Location:http://localhost/PTPMHDV/examples/benhnhan.php");
-            die;
+            exit();
+
             }
         }
     echo "Sai ten dn or mk";

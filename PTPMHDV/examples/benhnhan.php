@@ -1,3 +1,15 @@
+
+<?php
+session_start(); ?>
+
+<?php
+
+if (!isset($_SESSION['usernames']) ) {
+    header("Location:http://localhost/PTPMHDV/examples/");
+
+    die();
+}
+?>
 <?php
 require "connect.php";
 
@@ -58,6 +70,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+
 <div class="wrapper">
     <div class="sidebar">
         <!--
@@ -109,8 +122,8 @@ $result = $conn->query($sql);
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">
-                               <button class="btn btn-primary" >Log out</button>
+                            <a class="nav-link" href="xulydangxuat.php">
+                               <button class="btn btn-primary"  >Log out</button>
                             </a>
                         </li>
 
@@ -312,6 +325,7 @@ $result = $conn->query($sql);
         })
     })
 </script>
+
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
